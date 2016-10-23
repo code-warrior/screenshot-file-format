@@ -30,7 +30,8 @@ int main (int argc, char **argv)
    char line_from_command_response[RESPONSE_LENGTH];
    char current_file_format[4];
    char type_found = 'f';
-   char *token_from_line;
+   char valid_type_found = 'f';
+   char *token_from_line = "";
 
    /*
     * Run the screen capture read command, which will return NULL, nothing, or a string that may or may not look like the following:
@@ -59,6 +60,18 @@ int main (int argc, char **argv)
          //
          token_from_line = strtok(line_from_command_response, " ={};");
 
+         //
+         // If “type” is set, it would appear as the first token. Thus, this is the
+         // appropriate place to check for its presence.
+         //
+         if (0 == strcmp("type", token_from_line)) {
+            //
+            // A string for the screenshot file format has been set. However, it may
+            // or may not be valid.
+            //
+            type_found = 't';
+         }
+
          while(token_from_line) {
             if (0 == strcmp("png", token_from_line) ||
                 0 == strcmp("pdf", token_from_line) ||
@@ -68,7 +81,7 @@ int main (int argc, char **argv)
                 0 == strcmp("gif", token_from_line)) {
                strcpy(current_file_format, token_from_line);
 
-               type_found = 't';
+               valid_type_found = 't';
 
                break;
             }
@@ -78,10 +91,17 @@ int main (int argc, char **argv)
       }
    }
 
-   if (type_found == 't') {
-      printf("The screenshot file format is %s\n", current_file_format);
+   //
+   // If a type was not found, then the default must be PNG.
+   //
+   if ('f' == type_found) {
+      printf("The screenshot file format setting has not been modified, meaning that the default format is PNG.\n");
    } else {
-      printf("The screenshot file format has either not been modified, keeping the default file format PNG, or is not of type PNG, PDF, PSD, JPG, TIF, or GIF.\n");
+      if ('f' == valid_type_found) {
+         printf("The screenshot file format is not of type PNG, PDF, PSD, JPG, TIF, or GIF.\n");
+      } else {
+         printf("The screenshot file format is %s\n", current_file_format);
+      }
    }
 
    return 0;
