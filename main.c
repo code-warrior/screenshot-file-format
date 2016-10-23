@@ -81,7 +81,7 @@ int main (int argc, char **argv)
    if (type_found == 't') {
       printf("The screenshot file format is %s\n", current_file_format);
    } else {
-      printf("The screenshot file format has not been modified; PNG is the default.\n");
+      printf("The screenshot file format has either not been modified, keeping the default file format PNG, or is not of type PNG, PDF, PSD, JPG, TIF, or GIF.\n");
    }
 
    return 0;
