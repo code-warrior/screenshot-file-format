@@ -30,7 +30,7 @@ int main (int argc, char **argv)
    char line_from_command_response[RESPONSE_LENGTH];
    char current_file_format[4];
    char type_found = 'f';
-   char *token_from_line_from_command_response;
+   char *token_from_line;
 
    /*
     * Run the screen capture read command, which will return NULL, nothing, or a string that may or may not look like the following:
@@ -55,25 +55,25 @@ int main (int argc, char **argv)
          line_from_command_response[strlen(line_from_command_response)] = '\0';
 
          //
-         // Parse every token on every line
+         // Parse every token from each line in the command response
          //
-         token_from_line_from_command_response = strtok(line_from_command_response, " ={};");
+         token_from_line = strtok(line_from_command_response, " ={};");
 
-         while(token_from_line_from_command_response) {
-            if (0 == strcmp("png", token_from_line_from_command_response) ||
-                0 == strcmp("pdf", token_from_line_from_command_response) ||
-                0 == strcmp("psd", token_from_line_from_command_response) ||
-                0 == strcmp("jpg", token_from_line_from_command_response) ||
-                0 == strcmp("tif", token_from_line_from_command_response) ||
-                0 == strcmp("gif", token_from_line_from_command_response)) {
-               strcpy(current_file_format, token_from_line_from_command_response);
+         while(token_from_line) {
+            if (0 == strcmp("png", token_from_line) ||
+                0 == strcmp("pdf", token_from_line) ||
+                0 == strcmp("psd", token_from_line) ||
+                0 == strcmp("jpg", token_from_line) ||
+                0 == strcmp("tif", token_from_line) ||
+                0 == strcmp("gif", token_from_line)) {
+               strcpy(current_file_format, token_from_line);
 
                type_found = 't';
 
                break;
             }
 
-            token_from_line_from_command_response = strtok(NULL, " ={};\n\r\v\f");
+            token_from_line = strtok(NULL, " ={};\n\r\v\f");
          }
       }
    }
