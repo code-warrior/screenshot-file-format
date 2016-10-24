@@ -92,7 +92,7 @@ int main (int argc, char **argv)
    }
 
    //
-   // If a type was not found, then the default must be PNG.
+   // If a type was NOT found, then the default must be PNG.
    //
    if ('f' == type_found) {
       printf("The screenshot file format setting has not been modified, meaning that the default format is PNG.\n");
