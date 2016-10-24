@@ -27,7 +27,5 @@
 #define RESPONSE_LENGTH  32
 #define MAX_INPUT_LENGTH 12
 #define INVALID_INPUT    -1
-#define DISABLED         0
-#define ENABLED          1
 
 #endif
