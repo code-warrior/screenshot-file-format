@@ -25,7 +25,6 @@
 #define BOLDRED          "\033[31m\033[1m"
 
 #define MAX_INPUT_LENGTH 12
-#define INVALID_INPUT    -1
 #define RESPONSE_LENGTH        32
 
 #endif
