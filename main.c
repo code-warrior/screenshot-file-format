@@ -79,7 +79,9 @@ int main (int argc, char **argv)
                 0 == strcmp("jpg", token_from_line) ||
                 0 == strcmp("tif", token_from_line) ||
                 0 == strcmp("gif", token_from_line)) {
-               strcpy(current_file_format, token_from_line);
+               strcpy(current_file_format, GREEN);
+               strcat(current_file_format, token_from_line);
+               strcat(current_file_format, NORMAL);
 
                valid_type_found = 't';
 
