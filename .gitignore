@@ -140,3 +140,8 @@ Session.vim
 ############################################################################
 Thumbs.db
 ehthumbs.db
+
+#
+# Ignore the default Linux/Mac executable
+#
+a.out
