@@ -28,7 +28,7 @@ int main (int argc, char **argv)
 {
    FILE *command_response;
    char line_from_command_response[RESPONSE_LENGTH];
-   char current_file_format[4];
+   char current_file_format[MAX_FILE_FORMAT_LENGTH];
    char type_found = 'f';
    char valid_type_found = 'f';
    char *token_from_line = "";

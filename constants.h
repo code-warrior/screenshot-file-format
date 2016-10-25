@@ -27,5 +27,6 @@
 
 #define RESPONSE_LENGTH          32
 #define MAX_INPUT_LENGTH         12
+#define MAX_FILE_FORMAT_LENGTH   30
 
 #endif
