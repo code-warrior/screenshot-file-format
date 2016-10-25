@@ -43,7 +43,7 @@ int main (int argc, char **argv)
 
     */
    if (NULL == (command_response = popen("defaults read com.apple.screencapture", "r"))) {
-      printf("\n\t\t%sUnable to access the required screenshot command.%s\n", BOLDRED, BLACK);
+      printf("\n\t\t%sUnable to access the required screenshot command.%s\n", RED, NORMAL);
 
       exit(-1);
 
