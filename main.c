@@ -119,5 +119,23 @@ int main (int argc, char **argv)
       }
    }
 
+   printf("\n\t%s\n\n"
+          "%s\tChoose a format from the options below, or enter %sq%s (or %sQ%s) to exit and leave things as is.%s \n\n"
+          "\tEnter %sp%s for PNG\n"
+          "\t      %ss%s for PSD\n"
+          "\t      %sd%s for PDF\n"
+          "\t      %sj%s for JPG\n"
+          "\t      %st%s for TIF\n"
+          "\t      %sg%s for GIF\n\n",
+          intro_content, // First paragraph
+          NORMAL, RED, NORMAL, RED, NORMAL, NORMAL, // Second paragraph
+          GREEN, NORMAL, // PNG
+          GREEN, NORMAL, // PSD
+          GREEN, NORMAL, // PDF
+          GREEN, NORMAL, // JPG
+          GREEN, NORMAL, // TIF
+          GREEN, NORMAL  // GIF
+   );
+
    return 0;
 }
