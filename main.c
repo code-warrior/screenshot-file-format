@@ -79,6 +79,15 @@ int main (int argc, char **argv)
                 0 == strcmp("jpg", token_from_line) ||
                 0 == strcmp("tif", token_from_line) ||
                 0 == strcmp("gif", token_from_line)) {
+
+               {
+                  int i = -1;
+
+                  while ('\0' != token_from_line[i++]) {
+                     token_from_line[i] = toupper(token_from_line[i]);
+                  }
+               }
+
                strcpy(current_file_format, GREEN);
                strcat(current_file_format, token_from_line);
                strcat(current_file_format, NORMAL);
