@@ -72,7 +72,7 @@ int main (int argc, char **argv)
             type_found = 't';
          }
 
-         while(token_from_line) {
+         while (token_from_line) {
             if (0 == strcmp("png", token_from_line) ||
                 0 == strcmp("pdf", token_from_line) ||
                 0 == strcmp("psd", token_from_line) ||
