@@ -33,6 +33,7 @@ int main (int argc, char **argv)
    char type_found = 'f';
    char valid_type_found = 'f';
    char *token_from_line = "";
+   char intro_content[MAX_INTRO_CONTENT_LENGTH];
 
    /*
     * Run the screen capture read command, which will return NULL, nothing, or a string that may or may not look like the following:
@@ -107,12 +108,14 @@ int main (int argc, char **argv)
    // If a type was NOT found, then the default must be PNG.
    //
    if ('f' == type_found) {
-      printf("The screenshot file format setting has not been modified, meaning that the default format is PNG.\n");
+      strcpy(intro_content,"The screenshot file format setting has not been modified, meaning the default format is PNG.");
    } else {
       if ('f' == valid_type_found) {
-         printf("The screenshot file format is not of type PNG, PDF, PSD, JPG, TIF, or GIF.\n");
+         strcpy(intro_content,"The current setting for the screenshot file format is not of type PNG, PDF, PSD, JPG, TIF, or GIF.");
       } else {
-         printf("The screenshot file format is %s\n", current_file_format);
+         strcat(intro_content,"The current screenshot file format is ");
+         strcat(intro_content, current_file_format);
+         strcat(intro_content, ".");
       }
    }
 
