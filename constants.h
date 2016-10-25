@@ -23,6 +23,7 @@
 
 #define NORMAL                   "\033[0m"
 #define RED                      "\033[31m"
+#define GREEN                    "\033[32m"
 
 #define RESPONSE_LENGTH        32
 #define MAX_INPUT_LENGTH       12
