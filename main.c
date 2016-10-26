@@ -140,5 +140,10 @@ int main (int argc, char **argv)
 
    fgets(input, sizeof(input), stdin);
 
+   //
+   // Append the null character
+   //
+   input[strlen(input)] = '\0';
+
    return 0;
 }
