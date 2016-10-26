@@ -145,5 +145,14 @@ int main (int argc, char **argv)
    //
    input[strlen(input)] = '\0';
 
+   //
+   // If the user’s input contains only one character (the null character assigned in the previous statement), then nothing was entered at the prompt.
+   //
+   if (1 == strlen(input)) {
+      printf("\n%s\tEmpty entry.%s Please run this program again...\n\n", RED, NORMAL);
+
+      exit(-1);
+   }
+
    return 0;
 }
