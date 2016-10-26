@@ -34,6 +34,7 @@ int main (int argc, char **argv)
    char valid_type_found = 'f';
    char *token_from_line = "";
    char intro_content[MAX_INTRO_CONTENT_LENGTH];
+   char input[MAX_INPUT_LENGTH];
 
    /*
     * Run the screen capture read command, which will return NULL, nothing, or a string that may or may not look like the following:
@@ -136,6 +137,8 @@ int main (int argc, char **argv)
           GREEN, NORMAL, // TIF
           GREEN, NORMAL  // GIF
    );
+
+   fgets(input, sizeof(input), stdin);
 
    return 0;
 }
