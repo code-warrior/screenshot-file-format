@@ -126,7 +126,7 @@ int main (int argc, char **argv)
           "\t      %sd%s for PDF\n"
           "\t      %sj%s for JPG\n"
           "\t      %st%s for TIF\n"
-          "\t      %sg%s for GIF\n\n",
+          "\t      %sg%s for GIF\n",
           intro_content, // First paragraph
           NORMAL, RED, NORMAL, RED, NORMAL, NORMAL, // Second paragraph
           GREEN, NORMAL, // PNG
