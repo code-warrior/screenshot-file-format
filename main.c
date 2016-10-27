@@ -121,7 +121,7 @@ int main (int argc, char **argv)
    }
 
    printf("\n\t%s\n\n"
-          "%s\tChoose a format from the options below, or enter %sq%s (or %sQ%s) to exit and leave things as is.%s \n\n"
+          "%s\tChoose a format from the options below, or enter %sq%s to exit and leave things as is.%s \n\n"
           "\tEnter %sp%s for PNG\n"
           "\t      %ss%s for PSD\n"
           "\t      %sd%s for PDF\n"
