@@ -109,7 +109,10 @@ int main (int argc, char **argv)
    // If a type was NOT found, then the default must be PNG.
    //
    if ('f' == type_found) {
-      strcpy(intro_content,"The screenshot file format setting has not been modified, meaning the default format is PNG.");
+      strcpy(intro_content,"The screenshot file format setting has not been modified, meaning the default format is ");
+      strcat(intro_content, BLUE);
+      strcat(intro_content, "PNG");
+      strcat(intro_content, NORMAL);
    } else {
       if ('f' == valid_type_found) {
          strcpy(intro_content,"The current setting for the screenshot file format is not of type PNG, PDF, PSD, JPG, TIF, or GIF.");
