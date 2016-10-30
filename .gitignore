@@ -145,3 +145,8 @@ ehthumbs.db
 # Ignore the default Linux/Mac executable
 #
 a.out
+
+#
+# Ignore the executable until v1.0.0 is ready
+#
+screenshot-file-format
