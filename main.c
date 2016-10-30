@@ -25,7 +25,7 @@
 
 #include "constants.h"
 
-int main (int argc, char **argv)
+int main (void)
 {
    FILE *command_response;
    char line_from_command_response[RESPONSE_LENGTH];
