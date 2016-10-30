@@ -145,7 +145,7 @@ int main (void)
     * If the user’s input contains only one character (the null character assigned in the previous statement), then nothing was entered at the prompt.
     */
    if (1 == strlen(input)) {
-      printf("\n%s\tEmpty entry.%s Please run this program again...\n\n", RED, NORMAL);
+      printf("\n%s\tEmpty entry. Nothing was changed.%s Please run this program again...\n\n", RED, NORMAL);
 
       exit(EXIT_FAILURE);
    }
