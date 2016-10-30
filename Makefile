@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall
+CFLAGS = -Wall -ansi -pedantic
 EXECUTABLE = screenshot-file-format
 
 all: $(EXECUTABLE)
