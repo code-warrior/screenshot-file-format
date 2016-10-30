@@ -148,6 +148,86 @@ int main (void)
       printf("\n%s\tEmpty entry. Nothing was changed.%s Please run this program again...\n\n", RED, NORMAL);
 
       exit(EXIT_FAILURE);
+   } else {
+      switch (input[0]) {
+         case 'P':
+         case 'p':
+            if (NULL == (command_response = popen("defaults write com.apple.screencapture type png", "r"))) {
+               printf("Unable to set PNG. Either memory could not be allocated, or forking or piping failed. Please report this issue on GitHub at https://github.com/code-warrior/screenshot-file-format/issues or via email at roy@thecodeeducators.com.\n");
+
+               exit(EXIT_FAILURE);
+
+            } else {
+               printf("\t%sPNG%s was set.\n", BLUE, NORMAL);
+            }
+
+            break;
+
+         case 'S':
+         case 's':
+            if (NULL == (command_response = popen("defaults write com.apple.screencapture type psd", "r"))) {
+               printf("Unable to set PSD. Either memory could not be allocated, or forking or piping failed. Please report this issue on GitHub at https://github.com/code-warrior/screenshot-file-format/issues or via email at roy@thecodeeducators.com.\n");
+
+               exit(EXIT_FAILURE);
+
+            } else {
+               printf("\t%sPSD%s was set.\n", BLUE, NORMAL);
+            }
+
+            break;
+
+         case 'D':
+         case 'd':
+            if (NULL == (command_response = popen("defaults write com.apple.screencapture type pdf", "r"))) {
+               printf("Unable to set PDF. Either memory could not be allocated, or forking or piping failed. Please report this issue on GitHub at https://github.com/code-warrior/screenshot-file-format/issues or via email at roy@thecodeeducators.com.\n");
+
+               exit(EXIT_FAILURE);
+
+            } else {
+               printf("\t%sPDF%s was set.\n", BLUE, NORMAL);
+            }
+
+            break;
+
+         case 'J':
+         case 'j':
+            if (NULL == (command_response = popen("defaults write com.apple.screencapture type jpg", "r"))) {
+               printf("Unable to set JPG. Either memory could not be allocated, or forking or piping failed. Please report this issue on GitHub at https://github.com/code-warrior/screenshot-file-format/issues or via email at roy@thecodeeducators.com.\n");
+
+               exit(EXIT_FAILURE);
+
+            } else {
+               printf("\t%sJPG%s was set.\n", BLUE, NORMAL);
+            }
+
+            break;
+
+         case 'T':
+         case 't':
+            if (NULL == (command_response = popen("defaults write com.apple.screencapture type tif", "r"))) {
+               printf("Unable to set TIF. Either memory could not be allocated, or forking or piping failed. Please report this issue on GitHub at https://github.com/code-warrior/screenshot-file-format/issues or via email at roy@thecodeeducators.com.\n");
+
+               exit(EXIT_FAILURE);
+
+            } else {
+               printf("\t%sTIF%s was set.\n", BLUE, NORMAL);
+            }
+
+            break;
+
+         case 'G':
+         case 'g':
+            if (NULL == (command_response = popen("defaults write com.apple.screencapture type gif", "r"))) {
+               printf("Unable to set GIF. Either memory could not be allocated, or forking or piping failed. Please report this issue on GitHub at https://github.com/code-warrior/screenshot-file-format/issues or via email at roy@thecodeeducators.com.\n");
+
+               exit(EXIT_FAILURE);
+
+            } else {
+               printf("\t%sGIF%s was set.\n", BLUE, NORMAL);
+            }
+
+            break;
+      }
    }
 
    pclose(command_response);
