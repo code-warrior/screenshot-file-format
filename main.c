@@ -93,6 +93,8 @@ int main (void)
 
             token_from_line = strtok(NULL, " ={};\n\r\v\f");
          }
+
+         token_from_line = NULL;
       }
    }
 
