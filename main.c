@@ -46,7 +46,7 @@ int main (void)
       //
       // Read the response of the command, line by line
       //
-      while (NULL != fgets(line_from_command_response, sizeof(line_from_command_response) - 1, command_response)) {
+      while (NULL != fgets(line_from_command_response, (int) sizeof(line_from_command_response) - 1, command_response)) {
          line_from_command_response[strlen(line_from_command_response)] = '\0';
 
          //
@@ -132,7 +132,7 @@ int main (void)
           GREEN, NORMAL  // GIF
    );
 
-   fgets(input, sizeof(input), stdin);
+   fgets(input, (int) sizeof(input), stdin);
 
    //
    // Append the null character
