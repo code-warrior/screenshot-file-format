@@ -110,7 +110,7 @@ int main (void)
       if ('f' == valid_type_found) {
          strcpy(intro_content,"The current setting for the screenshot file format is not of type PNG, PDF, PSD, JPG, TIF, or GIF.");
       } else {
-         strcat(intro_content,"The current screenshot file format is ");
+         strcpy(intro_content,"The current screenshot file format is ");
          strcat(intro_content, current_file_format);
          strcat(intro_content, ".");
       }
