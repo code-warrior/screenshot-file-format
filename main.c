@@ -132,7 +132,7 @@ int main (void)
           GREEN, NORMAL  // GIF
    );
 
-   fgets(input, (int) sizeof(input), stdin);
+   (void) fgets(input, (int) sizeof(input), stdin);
 
    //
    // Append the null character
