@@ -36,15 +36,6 @@ int main (int argc, char **argv)
    char intro_content[MAX_INTRO_CONTENT_LENGTH];
    char input[MAX_INPUT_LENGTH];
 
-   /*
-    * Run the screen capture read command, which will return NULL, nothing, or a string that may or may not look like the following:
-
-       {
-         "disable-shadow" = 0;
-         type = gif;
-       }
-
-    */
    if (NULL == (command_response = popen("defaults read com.apple.screencapture", "r"))) {
       printf("\n\t\t%sUnable to access the required screenshot command.%s\n", RED, NORMAL);
 
