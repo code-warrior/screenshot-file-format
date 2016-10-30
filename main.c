@@ -39,7 +39,7 @@ int main (void)
    if (NULL == (command_response = popen("defaults read com.apple.screencapture", "r"))) {
       printf("\n\t\t%sUnable to access the required screenshot command.%s\n", RED, NORMAL);
 
-      exit(-1);
+      exit(EXIT_FAILURE);
 
    } else {
 
@@ -145,7 +145,7 @@ int main (void)
    if (1 == strlen(input)) {
       printf("\n%s\tEmpty entry.%s Please run this program again...\n\n", RED, NORMAL);
 
-      exit(-1);
+      exit(EXIT_FAILURE);
    }
 
    pclose(command_response);
