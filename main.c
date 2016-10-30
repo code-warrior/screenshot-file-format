@@ -43,26 +43,26 @@ int main (void)
 
    } else {
 
-      //
-      // Read the response of the command, line by line
-      //
+      /*
+       * Read the response of the command, line by line
+       */
       while (NULL != fgets(line_from_command_response, (int) sizeof(line_from_command_response) - 1, command_response)) {
          line_from_command_response[strlen(line_from_command_response)] = '\0';
 
-         //
-         // Parse every token from each line in the command response
-         //
+         /*
+          * Parse every token from each line in the command response
+          */
          token_from_line = strtok(line_from_command_response, " ={};");
 
-         //
-         // If “type” is set, it would appear as the first token. Thus, this is the
-         // appropriate place to check for its presence.
-         //
+         /*
+          * If “type” is set, it would appear as the first token. Thus, this is the
+          * appropriate place to check for its presence.
+          */
          if (0 == strcmp("type", token_from_line)) {
-            //
-            // A string for the screenshot file format has been set. However, it may
-            // or may not be valid.
-            //
+            /*
+             * A string for the screenshot file format has been set. However, it may
+             * or may not be valid.
+             */
             type_found = 't';
          }
 
@@ -98,9 +98,9 @@ int main (void)
       }
    }
 
-   //
-   // If a type was NOT found, then the default must be PNG.
-   //
+   /*
+    * If a type was NOT found, then the default must be PNG.
+    */
    if ('f' == type_found) {
       strcpy(intro_content,"The screenshot file format setting has not been modified, meaning the default format is ");
       strcat(intro_content, BLUE);
@@ -124,26 +124,26 @@ int main (void)
           "\t      %sj%s for JPG\n"
           "\t      %st%s for TIF\n"
           "\t      %sg%s for GIF\n",
-          intro_content, // First paragraph
+          intro_content, /* First paragraph */
           NORMAL, RED, NORMAL,
-          GREEN, NORMAL, // PNG
-          GREEN, NORMAL, // PSD
-          GREEN, NORMAL, // PDF
-          GREEN, NORMAL, // JPG
-          GREEN, NORMAL, // TIF
-          GREEN, NORMAL  // GIF
+          GREEN, NORMAL, /* PNG */
+          GREEN, NORMAL, /* PSD */
+          GREEN, NORMAL, /* PDF */
+          GREEN, NORMAL, /* JPG */
+          GREEN, NORMAL, /* TIF */
+          GREEN, NORMAL  /* GIF */
    );
 
    (void) fgets(input, (int) sizeof(input), stdin);
 
-   //
-   // Append the null character
-   //
+   /*
+    * Append the null character
+    */
    input[strlen(input)] = '\0';
 
-   //
-   // If the user’s input contains only one character (the null character assigned in the previous statement), then nothing was entered at the prompt.
-   //
+   /*
+    * If the user’s input contains only one character (the null character assigned in the previous statement), then nothing was entered at the prompt.
+    */
    if (1 == strlen(input)) {
       printf("\n%s\tEmpty entry.%s Please run this program again...\n\n", RED, NORMAL);
 
