@@ -1,7 +1,7 @@
 /*
     Screenshot File Format:
-    A Mac OS X command line utility that allows users to choose between PNG, PDF, PSD
-    JPG, TIF, or GIF as file formats for screenshots.
+    A Mac OS X command line utility that allows users to choose between PNG, PDF,
+    PSD, JPG, TIF, or GIF as file formats for screenshots.
 
     Copyright (C) 2016  Roy Vanegas
 
