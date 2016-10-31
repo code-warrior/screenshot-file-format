@@ -158,7 +158,7 @@ int main (void)
                exit(EXIT_FAILURE);
 
             } else {
-               printf("\t%sPNG%s was set.\n", BLUE, NORMAL);
+               printf("\t%sPNG%s was set.\n\n", BLUE, NORMAL);
             }
 
             break;
@@ -171,7 +171,7 @@ int main (void)
                exit(EXIT_FAILURE);
 
             } else {
-               printf("\t%sPSD%s was set.\n", BLUE, NORMAL);
+               printf("\t%sPSD%s was set.\n\n", BLUE, NORMAL);
             }
 
             break;
@@ -184,7 +184,7 @@ int main (void)
                exit(EXIT_FAILURE);
 
             } else {
-               printf("\t%sPDF%s was set.\n", BLUE, NORMAL);
+               printf("\t%sPDF%s was set.\n\n", BLUE, NORMAL);
             }
 
             break;
@@ -197,7 +197,7 @@ int main (void)
                exit(EXIT_FAILURE);
 
             } else {
-               printf("\t%sJPG%s was set.\n", BLUE, NORMAL);
+               printf("\t%sJPG%s was set.\n\n", BLUE, NORMAL);
             }
 
             break;
@@ -210,7 +210,7 @@ int main (void)
                exit(EXIT_FAILURE);
 
             } else {
-               printf("\t%sTIF%s was set.\n", BLUE, NORMAL);
+               printf("\t%sTIF%s was set.\n\n", BLUE, NORMAL);
             }
 
             break;
@@ -223,7 +223,7 @@ int main (void)
                exit(EXIT_FAILURE);
 
             } else {
-               printf("\t%sGIF%s was set.\n", BLUE, NORMAL);
+               printf("\t%sGIF%s was set.\n\n", BLUE, NORMAL);
             }
 
             break;
