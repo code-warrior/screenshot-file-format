@@ -30,6 +30,7 @@ int main (void)
    FILE *command_response;
    char line_from_command_response[RESPONSE_LENGTH];
    char current_file_format[MAX_FILE_FORMAT_LENGTH];
+   char current_file_format_untreated[MAX_FILE_FORMAT_LENGTH];
    char type_found = 'f';
    char valid_type_found = 'f';
    char *token_from_line = "";
@@ -73,6 +74,8 @@ int main (void)
                 0 == strcmp("jpg", token_from_line) ||
                 0 == strcmp("tif", token_from_line) ||
                 0 == strcmp("gif", token_from_line)) {
+
+               strcpy(current_file_format_untreated, token_from_line);
 
                {
                   int i = -1;
@@ -152,7 +155,7 @@ int main (void)
       switch (input[0]) {
          case 'P':
          case 'p':
-            if (0 == strcmp(current_file_format, "PNG")) {
+            if (0 == strcmp(current_file_format_untreated, "png")) {
                printf("\t%sPNG%s is the current file format. No change has been made to your system. Exiting…\n\n", BLUE, NORMAL);
 
                exit(EXIT_SUCCESS);
@@ -172,7 +175,7 @@ int main (void)
 
          case 'S':
          case 's':
-            if (0 == strcmp(current_file_format, "PSD")) {
+            if (0 == strcmp(current_file_format_untreated, "psd")) {
                printf("\t%sPSD%s is the current file format. No change has been made to your system. Exiting…\n\n", BLUE, NORMAL);
 
                exit(EXIT_SUCCESS);
@@ -192,7 +195,7 @@ int main (void)
 
          case 'D':
          case 'd':
-            if (0 == strcmp(current_file_format, "PDF")) {
+            if (0 == strcmp(current_file_format_untreated, "pdf")) {
                printf("\t%sPDF%s is the current file format. No change has been made to your system. Exiting…\n\n", BLUE, NORMAL);
 
                exit(EXIT_SUCCESS);
@@ -212,7 +215,7 @@ int main (void)
 
          case 'J':
          case 'j':
-            if (0 == strcmp(current_file_format, "JPG")) {
+            if (0 == strcmp(current_file_format_untreated, "jpg")) {
                printf("\t%sJPG%s is the current file format. No change has been made to your system. Exiting…\n\n", BLUE, NORMAL);
 
                exit(EXIT_SUCCESS);
@@ -232,7 +235,7 @@ int main (void)
 
          case 'T':
          case 't':
-            if (0 == strcmp(current_file_format, "TIF")) {
+            if (0 == strcmp(current_file_format_untreated, "tif")) {
                printf("\t%sTIF%s is the current file format. No change has been made to your system. Exiting…\n\n", BLUE, NORMAL);
 
                exit(EXIT_SUCCESS);
@@ -252,7 +255,7 @@ int main (void)
 
          case 'G':
          case 'g':
-            if (0 == strcmp(current_file_format, "GIF")) {
+            if (0 == strcmp(current_file_format_untreated, "gif")) {
                printf("\t%sGIF%s is the current file format. No change has been made to your system. Exiting…\n\n", BLUE, NORMAL);
 
                exit(EXIT_SUCCESS);
