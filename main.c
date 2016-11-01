@@ -85,7 +85,7 @@ int main (void)
                   }
                }
 
-               strcpy(current_file_format, GREEN);
+               strcpy(current_file_format, BLUE);
                strcat(current_file_format, token_from_line);
                strcat(current_file_format, NORMAL);
 
