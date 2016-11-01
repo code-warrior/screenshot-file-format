@@ -156,6 +156,7 @@ int main (void)
                printf("\t%sPNG%s is the current file format. No change has been made to your system. Exiting…\n\n", BLUE, NORMAL);
 
                exit(EXIT_SUCCESS);
+
             } else {
                if (NULL == (command_response = popen("defaults write com.apple.screencapture type png", "r"))) {
                   printf("Unable to set PNG. Either memory could not be allocated, or forking or piping failed. Please report this issue on GitHub at https://github.com/code-warrior/screenshot-file-format/issues or via email at roy@thecodeeducators.com.\n");
@@ -175,6 +176,7 @@ int main (void)
                printf("\t%sPSD%s is the current file format. No change has been made to your system. Exiting…\n\n", BLUE, NORMAL);
 
                exit(EXIT_SUCCESS);
+
             } else {
                if (NULL == (command_response = popen("defaults write com.apple.screencapture type psd", "r"))) {
                   printf("Unable to set PSD. Either memory could not be allocated, or forking or piping failed. Please report this issue on GitHub at https://github.com/code-warrior/screenshot-file-format/issues or via email at roy@thecodeeducators.com.\n");
