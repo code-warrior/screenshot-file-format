@@ -167,7 +167,7 @@ int main (void)
                   exit(EXIT_FAILURE);
 
                } else {
-                  printf("\t%sPNG%s was set.\n\n", BLUE, NORMAL);
+                  printf("\tThe screenshot file format is now %sPNG%s. Exiting…\n\n", BLUE, NORMAL);
                }
             }
 
@@ -187,7 +187,7 @@ int main (void)
                   exit(EXIT_FAILURE);
 
                } else {
-                  printf("\t%sPSD%s was set.\n\n", BLUE, NORMAL);
+                  printf("\tThe screenshot file format is now %sPSD%s. Exiting…\n\n", BLUE, NORMAL);
                }
             }
 
@@ -207,7 +207,7 @@ int main (void)
                   exit(EXIT_FAILURE);
 
                } else {
-                  printf("\t%sPDF%s was set.\n\n", BLUE, NORMAL);
+                  printf("\tThe screenshot file format is now %sPDF%s. Exiting…\n\n", BLUE, NORMAL);
                }
             }
 
@@ -227,7 +227,7 @@ int main (void)
                   exit(EXIT_FAILURE);
 
                } else {
-                  printf("\t%sJPG%s was set.\n\n", BLUE, NORMAL);
+                  printf("\tThe screenshot file format is now %sJPG%s. Exiting…\n\n", BLUE, NORMAL);
                }
             }
 
@@ -247,7 +247,7 @@ int main (void)
                   exit(EXIT_FAILURE);
 
                } else {
-                  printf("\t%sTIF%s was set.\n\n", BLUE, NORMAL);
+                  printf("\tThe screenshot file format is now %sTIF%s. Exiting…\n\n", BLUE, NORMAL);
                }
             }
 
@@ -267,7 +267,7 @@ int main (void)
                   exit(EXIT_FAILURE);
 
                } else {
-                  printf("\t%sGIF%s was set.\n\n", BLUE, NORMAL);
+                  printf("\tThe screenshot file format is now %sGIF%s. Exiting…\n\n", BLUE, NORMAL);
                }
             }
 
