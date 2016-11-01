@@ -171,13 +171,19 @@ int main (void)
 
          case 'S':
          case 's':
-            if (NULL == (command_response = popen("defaults write com.apple.screencapture type psd", "r"))) {
-               printf("Unable to set PSD. Either memory could not be allocated, or forking or piping failed. Please report this issue on GitHub at https://github.com/code-warrior/screenshot-file-format/issues or via email at roy@thecodeeducators.com.\n");
+            if (0 == strcmp(current_file_format, "PSD")) {
+               printf("\t%sPSD%s is the current file format. No change has been made to your system. Exiting…\n\n", BLUE, NORMAL);
 
-               exit(EXIT_FAILURE);
-
+               exit(EXIT_SUCCESS);
             } else {
-               printf("\t%sPSD%s was set.\n\n", BLUE, NORMAL);
+               if (NULL == (command_response = popen("defaults write com.apple.screencapture type psd", "r"))) {
+                  printf("Unable to set PSD. Either memory could not be allocated, or forking or piping failed. Please report this issue on GitHub at https://github.com/code-warrior/screenshot-file-format/issues or via email at roy@thecodeeducators.com.\n");
+
+                  exit(EXIT_FAILURE);
+
+               } else {
+                  printf("\t%sPSD%s was set.\n\n", BLUE, NORMAL);
+               }
             }
 
             break;
