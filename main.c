@@ -192,13 +192,20 @@ int main (void)
 
          case 'D':
          case 'd':
-            if (NULL == (command_response = popen("defaults write com.apple.screencapture type pdf", "r"))) {
-               printf("Unable to set PDF. Either memory could not be allocated, or forking or piping failed. Please report this issue on GitHub at https://github.com/code-warrior/screenshot-file-format/issues or via email at roy@thecodeeducators.com.\n");
+            if (0 == strcmp(current_file_format, "PDF")) {
+               printf("\t%sPDF%s is the current file format. No change has been made to your system. Exiting…\n\n", BLUE, NORMAL);
 
-               exit(EXIT_FAILURE);
+               exit(EXIT_SUCCESS);
 
             } else {
-               printf("\t%sPDF%s was set.\n\n", BLUE, NORMAL);
+               if (NULL == (command_response = popen("defaults write com.apple.screencapture type pdf", "r"))) {
+                  printf("Unable to set PDF. Either memory could not be allocated, or forking or piping failed. Please report this issue on GitHub at https://github.com/code-warrior/screenshot-file-format/issues or via email at roy@thecodeeducators.com.\n");
+
+                  exit(EXIT_FAILURE);
+
+               } else {
+                  printf("\t%sPDF%s was set.\n\n", BLUE, NORMAL);
+               }
             }
 
             break;
