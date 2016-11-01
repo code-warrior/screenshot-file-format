@@ -10,9 +10,13 @@ A Mac OS X command line utility that allows users to choose between PNG, PDF, PS
 
 ## PSD
 
+May only show in some Markdown readers/viewers.
+
 ![PSD screenshot](img/Screenshot.psd "PSD screenshot")
 
 ## PDF
+
+May only show in some Markdown readers/viewers.
 
 ![PDF screenshot](img/Screenshot.pdf "PDF screenshot")
 
@@ -21,6 +25,8 @@ A Mac OS X command line utility that allows users to choose between PNG, PDF, PS
 ![JPG screenshot](img/Screenshot.jpg "JPG screenshot")
 
 ## TIF
+
+May only show in some Markdown readers/viewers.
 
 ![TIF screenshot](img/Screenshot.tif "TIF screenshot")
 
