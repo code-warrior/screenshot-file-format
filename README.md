@@ -10,9 +10,13 @@ A Mac OS X command line utility that allows users to choose between PNG, PDF, PS
 
 ## PSD
 
+May only show in some Markdown readers/viewers.
+
 ![PSD screenshot](img/Screenshot.psd "PSD screenshot")
 
 ## PDF
+
+May only show in some Markdown readers/viewers.
 
 ![PDF screenshot](img/Screenshot.pdf "PDF screenshot")
 
@@ -22,13 +26,15 @@ A Mac OS X command line utility that allows users to choose between PNG, PDF, PS
 
 ## TIF
 
+May only show in some Markdown readers/viewers.
+
 ![TIF screenshot](img/Screenshot.tif "TIF screenshot")
 
 ## GIF
 
 ![GIF screenshot](img/Screenshot.gif "GIF screenshot")
 
-*Note*: Shadows were removed from the screenshots with [screenshot-shadow](https://github.com/code-warrior/screenshot-shadow)
+**Note**: Box shadows around screenshots were removed with the utility [screenshot-shadow](https://github.com/code-warrior/screenshot-shadow).
 
 ## Installation (Easiest)
 
