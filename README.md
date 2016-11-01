@@ -34,7 +34,7 @@ May only show in some Markdown readers/viewers.
 
 ![GIF screenshot](img/Screenshot.gif "GIF screenshot")
 
-*Note*: Shadows were removed from the screenshots with [screenshot-shadow](https://github.com/code-warrior/screenshot-shadow)
+**Note**: Box shadows around screenshots were removed with the utility [screenshot-shadow](https://github.com/code-warrior/screenshot-shadow).
 
 ## Installation (Easiest)
 
