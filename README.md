@@ -1,4 +1,4 @@
-# Screenshot File Format for Mac OS X [![Build Status](https://travis-ci.org/code-warrior/screenshot-file-format.svg?branch=v1.0.0)](https://travis-ci.org/code-warrior/screenshot-file-format)
+# Screenshot File Format for Mac OS X [![Build Status](https://travis-ci.org/code-warrior/screenshot-file-format.svg?branch=master)](https://travis-ci.org/code-warrior/screenshot-file-format)
 
 v1.0.3
 
