@@ -1,6 +1,6 @@
 # Screenshot File Format for Mac OS X [![Build Status](https://travis-ci.org/code-warrior/screenshot-file-format.svg?branch=master)](https://travis-ci.org/code-warrior/screenshot-file-format)
 
-v1.0.3
+v1.0.4
 
 A Mac OS X command line utility that allows users to choose between PNG, PDF, PSD, JPG, TIF, or GIF as file formats for screenshots.
 
