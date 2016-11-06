@@ -27,6 +27,9 @@
 
 int main (void)
 {
+
+#ifdef __APPLE__
+
    FILE *command_response;
    char line_from_command_response[RESPONSE_LENGTH];
    char current_file_format[MAX_FILE_FORMAT_LENGTH];
@@ -276,6 +279,12 @@ int main (void)
    }
 
    pclose(command_response);
+
+#else
+
+   printf("\n\nThis program is designed to only work in a Mac OS X environment.\n\n");
+
+#endif
 
    return 0;
 }
