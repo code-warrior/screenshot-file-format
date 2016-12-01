@@ -48,7 +48,7 @@ May only show in some Markdown readers/viewers.
 
 3. Move the binary into your local environment:
 
-        sudo mv screenshot-file-format /usr/local/bin
+        sudo mv screenshot-file-format /usr/local/bin/
 
 4. Run the program:
 
